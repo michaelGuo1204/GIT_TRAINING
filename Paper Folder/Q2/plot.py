@@ -52,10 +52,13 @@ for i in range(1,6):
             plt.title(all[i - 1] +' scan comparision')
             plt.plot(totalinfor[i - 1][0], totalinfor[i - 1][j-1],label= label[j-2])
             plt.plot(totalinfor[i - 1][0], totalinfor[i - 1][j - 2],label= label[j-3])
-            plt.fill_between(totalinfor[i - 1][0],totalinfor[i - 1][j-1],y2=min(min(totalinfor[i - 1][j-1]),min(totalinfor[i - 1][j-2])),color='blue', alpha=.25)
-            plt.fill_between(totalinfor[i - 1][0], totalinfor[i - 1][j - 2], y2=min(min(totalinfor[i - 1][j-2]),min(totalinfor[i - 1][j-1])),color='orange', alpha=.25)
+            plt.fill_between(totalinfor[i - 1][0], totalinfor[i - 1][j - 2],
+                             y2=min(min(totalinfor[i - 1][j - 2]), min(totalinfor[i - 1][j - 1])), color='red',
+                             alpha=.25)
+            plt.fill_between(totalinfor[i - 1][0],totalinfor[i - 1][j-1],y2=min(min(totalinfor[i - 1][j-2]),min(totalinfor[i - 1][j-1])),color='white', alpha=.80)
+
             plt.legend(loc='upper left')
-        plt.savefig('./IMG/'+str(all[i - 1])+str(j)+'.eps', dpi=1600, format='eps',bbox_inches = 'tight')
+        plt.savefig('./IMG/'+str(all[i - 1])+str(j)+'.png', dpi=1600, format='png',bbox_inches = 'tight')
 
 plt.figure(5,5)
 plt.show()
