@@ -26,7 +26,7 @@ describe the structure.
 
 In this case, I choose B3LYP and 6-31G(d) as the calculation parameters. And after 13 steps, the total energy converge at around -1557.9 Hartree. Indicating the normal termination of optimization precess. The description of the optimized molecule 
 
-Beta-carotene, with the molecular formula C40H56, owns a long chain of conjugated double bounds together with two retinyl groups. The huge conjugated structure equip this molecule of  highly-delocalized  electron groups.
+Beta-carotene, with the molecular formula $C_{40}H_{56}$, owns a long chain of conjugated double bounds together with two retinyl groups. The huge conjugated structure equip this molecule of  highly-delocalized  electron groups.
 
 ![image-20201112194348066](/home/bili/.config/Typora/typora-user-images/image-20201112194348066.png)
 
@@ -36,8 +36,8 @@ The distribution of charge and bonds' length also prove the delocalization of el
 
 | Class               | Typical Bond Length(pm)    | Typical Bond Order |
 | ------------------- | -------------------------- | ------------------ |
-| Ethylene            | (C=C) 133.9                | 2                  |
-| Ethene              | (C-C) 152.8                | 1                  |
+| $Ethylene$          | (C=C) 133.9                | 2                  |
+| $Ethene$            | (C-C) 152.8                | 1                  |
 | $ \beta -Carotene $ | (C=C)137.4 <br>(C-C) 144.3 | (C=C)2<br>(C-C)1.5 |
 
 ![image-20201112195004674](/home/bili/.config/Typora/typora-user-images/image-20201112195004674.png)
@@ -57,9 +57,26 @@ The distribution of charge and bonds' length also prove the delocalization of el
 > Command:  zindo=(nstates=10) scrf=(iefpcm,solvent=ethanol)
 
 ### 5. The experimentally measured maximum UV-vis absorption peak in ethanol is 450 nm. Discuss all the computed and the experimental excitation energy values and comment on
-the models used.
 
+The calculated excitation by ZINDO model get an excitation energy of c.a. 540 nm. Frankly speaking, the gap between the experimental and computed data is not even far. 
 
+Consequently, i would like to have some discussion about the significant gap. As long as solvation model, compute model and molecular itself are considered, I hold the opinion that the *IEFPCM solvation model*  and $\beta-Carotene's $ own properties contribute to the bias. I will elaborate my stand from two aspects ---- the model and the solvent molecular.
+
+First, the IEFPCM solvation model itself plays an important role in generating the bias. An implicit solvent model as it is, it  fails to deal with non-electrostatic components in the given situation, which means the hydrogen bond existing in the system can not be take into consideration. Nevertheless, hydrogen bonds contribute significantly to the  molecular conformation in polarize environment, in this case, the ethanol. The conformation will then have impacts on the conjugate structure, which mainly provides $\pi \rightarrow \pi^\star$ transition, and the UV-Vis spectrum as well. Second, the $\beta-Carotene$ molecule generate UV-Vis absorption by the  $\pi \rightarrow \pi^\star$ transition. But according to the solvent effect upon the UV-Vis spectrum,  polar solvent will leads to a phenomena called "Red shift" on the $\pi \rightarrow \pi^\star$ transition which means the absorption peak will shift to a higher position, from 450 nm to 540 nm.
+
+Then i want to have some comments on the ZINDO model.
+
++ As for the efficiency, ZINDO's semi-empirical type shows higher speed in calculation than those *ab initio* methods such as TDDFT. I calculate in both means and make a compare. 
+
+> TDDFT:  Job cpu time:       0 days 19 hours 33 minutes 11.0 seconds.
+>
+> ZINDO:  Job cpu time:       0 days  0 hours  4 minutes 20.8 seconds.
+
++ As for the accuracy, ZINDO's mechanism ----**INDO** method guarantees the accuracy of spectrum calculation. 
+
+> TDDFT : Absorption peak :600 nm
+>
+> ZINDO:  Absorption peak 540 nm
 
 
 
@@ -67,4 +84,66 @@ the models used.
 
 ### $R=-H$
 
-$ \beta $
+![](/home/bili/Lernen/Compumental Chemistry/Paper Folder/Q2/H/Tri.svg)
+
+![Sig](/home/bili/Lernen/Compumental Chemistry/Paper Folder/Q2/H/Sig.svg)
+
+### $R = -CH_3$
+
+![Sig](/home/bili/Lernen/Compumental Chemistry/Paper Folder/Q2/CH3/Sig.svg)![Tri](/home/bili/Lernen/Compumental Chemistry/Paper Folder/Q2/CH3/Tri.svg)
+
+### $R = -NH_2 $
+
+![Sig](/home/bili/Lernen/Compumental Chemistry/Paper Folder/Q2/NH2/Sig.svg)
+
+### $R = -OH$
+
+![Tri](/home/bili/Lernen/Compumental Chemistry/Paper Folder/Q2/OH/Tri.svg)
+
+![Sig](/home/bili/Lernen/Compumental Chemistry/Paper Folder/Q2/OH/Sig.svg)
+
+### $ R= -F$
+
+![](/home/bili/Lernen/Compumental Chemistry/Paper Folder/Q2/F/Tri.svg)
+
+![Sig](/home/bili/Lernen/Compumental Chemistry/Paper Folder/Q2/F/Sig.svg)
+
+## Q3
+
+### 1. Using the 6-31G(d) basis set, determine the transition state for the dehydration of ethanol to ethylene, and record the B3LYP/6-31G(d) and MP2/6-31G(d) values for the barrier height.
+
+DFT: -155.0313238  -154.9194568
+
+MP2:-154.5171 -154.3949483
+
+
+
+## Q4
+
+### 1&2 Guess the structures and optimize the lowest singlet states
+
+After some calculations, I pick up 4 candidates for this question, they are
+
+
+
+## Q5
+
+### 1. compute the reaction enthalpy
+| Class   | Before      | After       |
+| ------- | ----------- | ----------- |
+| Pyrr    | -209.573293 | -398.242577 |
+| Pyra    | -225.627079 | -414.286986 |
+| Imi     | -225.652388 | -414.313914 |
+| Tria123 | -241.686778 | -430.331907 |
+| Tria124 | -241.710414 | -430.363153 |
+
+### 2. N lone pair energy
+
+|         |       |                   |                                                              |
+| ------- | ----- | ----------------- | ------------------------------------------------------------ |
+| Pyrr    | 15    | -0.14638          | ![image-20201114000154802](/home/bili/.config/Typora/typora-user-images/image-20201114000154802.png) |
+| Pyra    | 14,15 | -0.17512_-0.17501 | ![image-20201114000330492](/home/bili/.config/Typora/typora-user-images/image-20201114000330492.png) |
+| Imi     | 14,15 | -0.16573_-0.16575 | ![image-20201113235923611](/home/bili/.config/Typora/typora-user-images/image-20201113235923611.png) |
+| Tria123 | 13    | -0.21122          | ![image-20201114000607770](/home/bili/.config/Typora/typora-user-images/image-20201114000607770.png) |
+| Tria124 | 15    | -0.18811          | ![image-20201114000743482](/home/bili/.config/Typora/typora-user-images/image-20201114000743482.png) |
+
