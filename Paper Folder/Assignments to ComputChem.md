@@ -82,31 +82,17 @@ Then i want to have some comments on the ZINDO model.
 
 ## Q2
 
-### $R=-H$
+### 
 
-![](/home/bili/Lernen/Compumental Chemistry/Paper Folder/Q2/H/Tri.svg)
+|      |      |      |
+| ---- | ---- | ---- |
+|      |      |      |
+|      |      |      |
+|      |      |      |
+|      |      |      |
+|      |      |      |
 
-![Sig](/home/bili/Lernen/Compumental Chemistry/Paper Folder/Q2/H/Sig.svg)
 
-### $R = -CH_3$
-
-![Sig](/home/bili/Lernen/Compumental Chemistry/Paper Folder/Q2/CH3/Sig.svg)![Tri](/home/bili/Lernen/Compumental Chemistry/Paper Folder/Q2/CH3/Tri.svg)
-
-### $R = -NH_2 $
-
-![Sig](/home/bili/Lernen/Compumental Chemistry/Paper Folder/Q2/NH2/Sig.svg)
-
-### $R = -OH$
-
-![Tri](/home/bili/Lernen/Compumental Chemistry/Paper Folder/Q2/OH/Tri.svg)
-
-![Sig](/home/bili/Lernen/Compumental Chemistry/Paper Folder/Q2/OH/Sig.svg)
-
-### $ R= -F$
-
-![](/home/bili/Lernen/Compumental Chemistry/Paper Folder/Q2/F/Tri.svg)
-
-![Sig](/home/bili/Lernen/Compumental Chemistry/Paper Folder/Q2/F/Sig.svg)
 
 ## Q3
 
@@ -136,8 +122,8 @@ Molecule $C_4 H_4$ ,with a degree of unsaturation  $\Omega =4 $, is likely to co
 
 + $215 cm^{-1}$ **s**	Have not found any specific indication, but might refer to conjugate structure
 + $852 cm^{-1}$ **s**	This absorption peak indicates $CH_{2}$ wagging
-+ $1608 cm^{-1}$ **s**     This absorption peak indicates $CC$ stretching)
-+ 
++ $1608 cm^{-1}$ **s**     This absorption peak indicates $CC$ stretching
++  
 
 ### 2&3.  Optimize the lowest singlet states
 
@@ -159,13 +145,13 @@ After some calculations, I pick up 4 candidates for this question. They are list
 ## Q5
 
 ### 1. Compute the reaction enthalpy
-| Class   | Before<br>Hartree | After<br>Hartree | Reaction Enthalpy |
-| ------- | ----------------- | ---------------- | ----------------- |
-| Pyrr    | -209.573293       | -398.242577      | -98.3             |
-| Pyra    | -225.627079       | -414.286986      | -74.5             |
-| Imi     | -225.652388       | -414.313914      | -78.3             |
-| Tria123 | -241.686778       | -430.331907      | -35.2             |
-| Tria124 | -241.710414       | -430.363153      | -55.5             |
+| Class   | Before<br>Hartree | After<br>Hartree | Reaction Enthalpy<br>kJ/mol |
+| ------- | ----------------- | ---------------- | --------------------------- |
+| Pyrr    | -209.573293       | -398.242577      | -98.3                       |
+| Pyra    | -225.627079       | -414.286986      | -74.5                       |
+| Imi     | -225.652388       | -414.313914      | -78.3                       |
+| Tria123 | -241.686778       | -430.331907      | -35.2                       |
+| Tria124 | -241.710414       | -430.363153      | -55.5                       |
 
 ### 2. N lone pair energy
 
@@ -179,5 +165,36 @@ After some calculations, I pick up 4 candidates for this question. They are list
 
 ![EvsN](/home/bili/Lernen/Compumental Chemistry/Paper Folder/Q5/EvsN.png)
 
-### Discuss the geometry change of CO 2 and its reactivity with azole anions
+### 3. Discuss the geometry change of $CO_2$ and its reactivity with azole anions
+
+The geometry of $CO_2$ consists of two parts: the   $\angle OCO$ angle and $d_{C-O}$. In my opinion, the $\angle OCO$ will have supervise impact on the 
+
+After the calculation, I have got some data of $CO_2$ geometry and  its reactivity.
+
+| Class   | $d_{C-N}$ | $\angle OCO$ | $d_{C-O}$ | Reaction Enthalpy |
+| ------- | --------- | ------------ | --------- | ----------------- |
+| Pyrr    | 1.53      | 134          | 1.23603   | -98.3             |
+| Pyra    | 1.57      | 136          | 1.23550   | -74.5             |
+| Imi     | 1.6       | 135          | 1.23295   | -78.3             |
+| Tria123 | 1.67      | 140          | 1.21512   | -35.2             |
+| Tria124 | 1.56      | 136          | 1.22928   | -55.5             |
+
+Here i choose $\angle OCO$  ,  $d_{C-O}$ to represent the geometry change of the $CO_2$ molecule, and choose the bond length between carbon and nitrogen atom and reaction enthalpy as the measurements of the reactivity. And I get such graphs.
+
+| Reaction enthalpy                                            | C-N bond                                                     |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| ![image-20201114224344983](/home/bili/.config/Typora/typora-user-images/image-20201114224344983.png) | ![image-20201114224647465](/home/bili/.config/Typora/typora-user-images/image-20201114224647465.png) |
+| ![image-20201114225825638](/home/bili/.config/Typora/typora-user-images/image-20201114225825638.png) | ![image-20201114225927009](/home/bili/.config/Typora/typora-user-images/image-20201114225927009.png) |
+
+From these graphs we can make further assumption, the more the $\angle OCO$ bends , the higher the reactivity will be. The more the $d_{C-O}$ stretch, the higher the reactivity will be. It 's a funny phenomena that deserve some discussion. 
+
+I want to discuss this question by Frontier molecular orbital theory. Take pyrr into consideration, the frontier of the reaction are
+
+| $CO_2$                                                       | Pyrr                                                         | Pyrr-$CO_2$                                                  |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| ![Carbon Dioxide](/home/bili/Lernen/Compumental Chemistry/Paper Folder/Q5/Example/Carbon Dioxide.png) | ![Pyrr_optfrep](/home/bili/Lernen/Compumental Chemistry/Paper Folder/Q5/Example/Pyrr_optfrep.png) | ![Pyrr_CD_Reaction](/home/bili/Lernen/Compumental Chemistry/Paper Folder/Q5/Example/Pyrr_CD_Reaction.png) |
+
+To generate more stable bond, which is $\sigma_{N-C}$ bond in the Pyrr-$CO_2$, the $CO_2$ molecule should bend to a proper angle to get its $\pi_{C-O}^{\star}$ orbit maximum overlap with the N-lone pair orbit. And this kind of bend depends on the N lone pair's energy. The higher the N lone pair's energy, the easier it would bend the $CO_2$molecule to reach stable state. The larger degree carbon dioxide bends, the more stable molecular will form. After the binding of the C-N atoms, newly constructed molecular conjugate structure will then shorten the $CO_2$ bond length by conjugative effects. Hence i can have more faith on my assumption that the $\angle OCO$ is the main components of the carbon dioxide's reactivity with azole anions, the length of C-O is just a consequence of forming a molecule ,which is also a consequence of $\angle OCO$ bends;
+
+But when cast our sight into both molecules, we will find another problem. A same $\angle OCO$ might have a reaction enthalpy gap, for instance Pyrr and Tria124. Then i find that the more N atoms existing on the ring, the higher the reaction enthalpy will be. And the effect of the N number is far meticulous that the effect from angle bends in carbon dioxide. I would like to make a assumption that the bigger electronegativity leads to a dispose of electron density in the ring, which will then deactivate the reaction But there are just few molecules and data so i can not illustrate my assumption. I will try to make some further discussion after reaching more data.
 
