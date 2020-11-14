@@ -112,38 +112,72 @@ Then i want to have some comments on the ZINDO model.
 
 ### 1. Using the 6-31G(d) basis set, determine the transition state for the dehydration of ethanol to ethylene, and record the B3LYP/6-31G(d) and MP2/6-31G(d) values for the barrier height.
 
-DFT: -155.0313238  -154.9194568
+After calculation i have got the possible transition state. Both states have only one  imaginary frequency. And the imaginary frequency suits the procedure of the reaction. Hence we can make sure that these transition states are the exception state. According to such  a formula:
+$$
+E_{barrier}=E_{trasition}-E_{reactant}
+$$
+We can get the barrier energy of this reaction.
 
-MP2:-154.5171 -154.3949483
+**DFT Method**:  $293.73 kJ/mol$
+
+**MP2 Method**:  $320.71kJ/mol$
+
+### 2. IRC Path
+
+
 
 
 
 ## Q4
 
-### 1&2 Guess the structures and optimize the lowest singlet states
+### 1. Guess the structures
 
-After some calculations, I pick up 4 candidates for this question, they are
+Molecule $C_4 H_4$ ,with a degree of unsaturation  $\Omega =4 $, is likely to contain unsaturation bonds within the molecule. The question mentions several frequencies, and I just started some analysis.
+
++ $215 cm^{-1}$ **s**	Have not found any specific indication, but might refer to conjugate structure
++ $852 cm^{-1}$ **s**	This absorption peak indicates $CH_{2}$ wagging
++ $1608 cm^{-1}$ **s**     This absorption peak indicates $CC$ stretching)
++ 
+
+### 2&3.  Optimize the lowest singlet states
+
+After some calculations, I pick up 4 candidates for this question. They are listed as follows.
+
+| Structure                                                    | IR Spectrum                                                  |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| <img src="/home/bili/Lernen/Compumental Chemistry/Paper Folder/Q4/C3C2/Mol.png" style="zoom: 25%;" /> | ![Spec](/home/bili/Lernen/Compumental Chemistry/Paper Folder/Q4/C3C2/Spec.png) |
+| <img src="/home/bili/Lernen/Compumental Chemistry/Paper Folder/Q4/3C2 Target/Mol.png" alt="Mol" style="zoom: 25%;" /> | ![Spec](/home/bili/Lernen/Compumental Chemistry/Paper Folder/Q4/3C2 Target/Spec.png) |
+| <img src="/home/bili/Lernen/Compumental Chemistry/Paper Folder/Q4/C3C/Mol.png" alt="Mol" style="zoom:25%;" /> | ![Spec](/home/bili/Lernen/Compumental Chemistry/Paper Folder/Q4/C3C/Spec.png) |
+| <img src="/home/bili/Lernen/Compumental Chemistry/Paper Folder/Q4/C3C2/Mol.png" alt="Mol" style="zoom:25%;" /> | ![Spec](/home/bili/Lernen/Compumental Chemistry/Paper Folder/Q4/C3C2/Spec.png) |
+
+### 4. Discussion upon the structure
+
+
 
 
 
 ## Q5
 
-### 1. compute the reaction enthalpy
-| Class   | Before      | After       |
-| ------- | ----------- | ----------- |
-| Pyrr    | -209.573293 | -398.242577 |
-| Pyra    | -225.627079 | -414.286986 |
-| Imi     | -225.652388 | -414.313914 |
-| Tria123 | -241.686778 | -430.331907 |
-| Tria124 | -241.710414 | -430.363153 |
+### 1. Compute the reaction enthalpy
+| Class   | Before<br>Hartree | After<br>Hartree | Reaction Enthalpy |
+| ------- | ----------------- | ---------------- | ----------------- |
+| Pyrr    | -209.573293       | -398.242577      | -98.3             |
+| Pyra    | -225.627079       | -414.286986      | -74.5             |
+| Imi     | -225.652388       | -414.313914      | -78.3             |
+| Tria123 | -241.686778       | -430.331907      | -35.2             |
+| Tria124 | -241.710414       | -430.363153      | -55.5             |
 
 ### 2. N lone pair energy
 
-|         |       |                   |                                                              |
-| ------- | ----- | ----------------- | ------------------------------------------------------------ |
-| Pyrr    | 15    | -0.14638          | ![image-20201114000154802](/home/bili/.config/Typora/typora-user-images/image-20201114000154802.png) |
-| Pyra    | 14,15 | -0.17512_-0.17501 | ![image-20201114000330492](/home/bili/.config/Typora/typora-user-images/image-20201114000330492.png) |
-| Imi     | 14,15 | -0.16573_-0.16575 | ![image-20201113235923611](/home/bili/.config/Typora/typora-user-images/image-20201113235923611.png) |
-| Tria123 | 13    | -0.21122          | ![image-20201114000607770](/home/bili/.config/Typora/typora-user-images/image-20201114000607770.png) |
-| Tria124 | 15    | -0.18811          | ![image-20201114000743482](/home/bili/.config/Typora/typora-user-images/image-20201114000743482.png) |
+| Class   | Bond  Index | Bound Energy<br>(Hartree) | Electron distribution and Energy level                       |
+| ------- | ----------- | ------------------------- | ------------------------------------------------------------ |
+| Pyrr    | 15          | -384.32069                | ![image-20201114000154802](/home/bili/.config/Typora/typora-user-images/image-20201114000154802.png) |
+| Pyra    | 14,15       | -459.77756                | ![image-20201114000330492](/home/bili/.config/Typora/typora-user-images/image-20201114000330492.png) |
+| Imi     | 14,15       | -435.124                  | ![image-20201113235923611](/home/bili/.config/Typora/typora-user-images/image-20201113235923611.png) |
+| Tria123 | 13          | -554.55811                | ![image-20201114000607770](/home/bili/.config/Typora/typora-user-images/image-20201114000607770.png) |
+| Tria124 | 15          | -493.882805               | ![image-20201114000743482](/home/bili/.config/Typora/typora-user-images/image-20201114000743482.png) |
+
+![EvsN](/home/bili/Lernen/Compumental Chemistry/Paper Folder/Q5/EvsN.png)
+
+### Discuss the geometry change of CO 2 and its reactivity with azole anions
 
